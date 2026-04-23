@@ -1,195 +1,293 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "JewelryStore",
-  "name": "مجوهرات أندريا",
-  "image": "https://www2.0zz0.com/2025/05/02/22/895059266.jpg",
-  "description": "تشكيلة فاخرة من الذهب والمجوهرات، ذهب عيار 21 و24، تصاميم مميزة.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "EG"
-  },
-  "telephone": "+201062056425",
-  "url": "قريبًا"
-}
-</script>
-
-  <title>مجوهرات أندريا - Andria Jewelry</title>
-  <meta name="description" content="اكتشف أجمل تصاميم الذهب مع مجوهرات أندريا. تشكيلات أنيقة، ذهب عيار 21 و24، توصيل سريع، تواصل معنا الآن." />
-  <meta name="keywords" content="مجوهرات, ذهب, أندريا, Andria, عيار 21, عيار 24, سامح عياد" />
-  <meta name="google-site-verification" content="google56e00ad70d2abd2f" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مجوهرات اندريا</title>
+  <title>مجوهرات أندريا - Andria Jewelry</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <style>
-    .footer-box {
-  background-color: #000;
-  color: #fff;
-  padding: 15px 25px;
-  margin-top: 50px;
-  border-radius: 25px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: 'Cairo', sans-serif;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
-  animation: glow 2s infinite;
-}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-.footer-box {
-  text-align: center;
-}
-
-.footer-box p {
-  margin: 0;
-  font-size: 16px;
-}
-
-.footer-box span {
-  display: block;
-  color: #d4af37;
-  margin-top: 8px;
-  font-size: 18px;
-}
-
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 10px #d4af37;
-  }
-  50% {
-    box-shadow: 0 0 20px #d4af37;
-  }
-}
     body {
-      margin: 0;
-      padding: 0;
+      font-family: 'Cairo', sans-serif;
       background: url('https://www2.0zz0.com/2025/05/02/22/926848264.jpg') no-repeat center center fixed;
       background-size: cover;
-      height: 100vh;
-      font-family: 'Cairo', sans-serif;
-      text-align: center;
-      color: #4a4a4a;
-    }
-
-    .header {
-      background-size: cover;
-      background-position: center;
-      height: 300px;
-      position: relative;
-    }
-
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid #d4af37;
-      position: absolute;
-      bottom: -65px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .content {
-      margin-top: 110px;
-      padding: 20px;
-    }
-
-    h1 {
-      margin: 10px 0 5px;
-      font-size: 48px;
-      color: #d99f0d;
-    }
-
-    h2 {
-      margin: 10px 0 5px;
-      font-size: 32px;
-      color: #d99f0d;
-    }
-
-    .links {
-      margin-top: 30px;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 30px 20px;
+      position: relative;
     }
 
-    .link-box {
-      background: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      margin: 10px auto;
-      width: 90%;
-      max-width: 300px;
-      border-radius: 30px;
-      border: 1px solid #d4af37;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      direction: rtl;
-      transition: all 0.3s ease;
-      color: #4a4a4a;
-      font-weight: bold;
+    /* طبقة داكنة شفافة */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(3px);
+      z-index: -1;
+    }
+
+    /* البروفايل مع هالة ذهبية */
+    .profile-wrap {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .profile-wrap::before {
+      content: '';
+      position: absolute;
+      top: -10px; left: -10px;
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, transparent, #d4af37, transparent, #d4af37, transparent);
+      animation: rotate 4s linear infinite;
+      filter: blur(8px);
+      opacity: 0.7;
+    }
+
+    @keyframes rotate {
+      100% { transform: rotate(360deg); }
+    }
+
+    .profile-pic {
+      width: 150px; height: 150px;
+      border-radius: 50%;
+      border: 4px solid #d4af37;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 30px rgba(212,175,55,0.5);
+    }
+
+    /* النصوص */
+    .brand {
+      font-size: 46px;
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      margin-bottom: 5px;
+    }
+
+    .gold-text {
+      color: #d4af37;
+      text-shadow: 0 0 20px rgba(212,175,55,0.6);
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #d4af37, transparent);
+      margin: 15px auto 30px;
+    }
+
+    /* الروابط الزجاجية */
+    .links {
+      width: 100%;
+      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .glass-btn {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 16px;
+      padding: 16px 22px;
       text-decoration: none;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
     }
 
-    .link-box:hover {
-      background: rgba(212, 175, 55, 0.2);
-      transform: scale(1.03);
+    .glass-btn::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(212,175,55,0.2), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.5s;
     }
 
-    @media (max-width: 768px) {
-      h1 { font-size: 36px; }
-      h2 { font-size: 24px; }
-      .profile-pic { width: 120px; height: 120px; }
+    .glass-btn:hover::after {
+      transform: translateX(100%);
+    }
+
+    .glass-btn:hover {
+      background: rgba(212,175,55,0.15);
+      border-color: rgba(212,175,55,0.5);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3), 0 0 20px rgba(212,175,55,0.2);
+    }
+
+    .btn-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      background: rgba(255,255,255,0.15);
+      transition: all 0.3s;
+    }
+
+    .glass-btn:hover .btn-icon {
+      background: rgba(212,175,55,0.3);
+      transform: rotate(10deg) scale(1.1);
+    }
+
+    .btn-info { flex: 1; text-align: right; }
+    .btn-title { font-weight: 700; font-size: 16px; display: block; }
+    .btn-desc { font-size: 12px; opacity: 0.7; margin-top: 2px; }
+
+    /* فوتر */
+    .footer-box {
+      margin-top: 40px;
+      background: rgba(0,0,0,0.7);
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 25px;
+      padding: 18px 35px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .footer-box p { color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 6px; }
+    .footer-box span {
+      color: #d4af37;
+      font-weight: 700;
+      font-size: 16px;
+      text-shadow: 0 0 15px rgba(212,175,55,0.5);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    /* تأثير برق ذهبي */
+    .sparkle {
+      position: fixed;
+      pointer-events: none;
+      color: #d4af37;
+      font-size: 14px;
+      animation: sparkleAnim 4s infinite;
+      opacity: 0;
+    }
+
+    @keyframes sparkleAnim {
+      0% { opacity: 0; transform: scale(0) rotate(0deg); }
+      50% { opacity: 1; transform: scale(1) rotate(180deg); }
+      100% { opacity: 0; transform: scale(0) rotate(360deg); }
+    }
+
+    @media (max-width: 480px) {
+      .brand { font-size: 36px; }
+      .profile-pic { width: 130px; height: 130px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <img class="profile-pic" src="https://www2.0zz0.com/2025/05/02/22/895059266.jpg" alt="اندريا معاك في كل مكان">
+  <!-- برق ذهبي عشوائي -->
+  <script>
+    for(let i=0; i<8; i++) {
+      const s = document.createElement('i');
+      s.className = 'fas fa-star sparkle';
+      s.style.left = Math.random()*100 + '%';
+      s.style.top = Math.random()*100 + '%';
+      s.style.animationDelay = Math.random()*4 + 's';
+      s.style.animationDuration = (3+Math.random()*3) + 's';
+      document.body.appendChild(s);
+    }
+  </script>
+
+  <div class="profile-wrap">
+    <img class="profile-pic" src="https://www2.0zz0.com/2025/05/02/22/895059266.jpg" alt="Andria">
   </div>
 
-  <div class="content">
-    <h1>مجوهرات اندريا</h1>
-    <h2>اداره سامح عياد</h2>
+  <h1 class="brand">مجوهرات <span class="gold-text">أندريا</span></h1>
+  <p class="subtitle">إدارة: سامح عياد</p>
+  <div class="divider"></div>
 
-    <div class="links">
-      <a href="https://www.facebook.com/share/18z4UUHq3N/" class="link-box">
-        <i class="fab fa-facebook" style="color:#1877f2;"></i> Facebook
-      </a>
+  <div class="links">
+    <a href="https://wa.me/201062056425" class="glass-btn" target="_blank">
+      <div class="btn-icon" style="color: #25d366;"><i class="fab fa-whatsapp"></i></div>
+      <div class="btn-info">
+        <span class="btn-title">واتساب</span>
+        
+      </div>
+      <i class="fas fa-external-link-alt" style="opacity: 0.5; font-size: 12px;"></i>
+    </a>
 
-      <a href="https://maps.app.goo.gl/MJZDQoPquqNBmW6F9?g_st=aw" class="link-box">
-        <i class="fas fa-map-marker-alt" style="color:red;"></i> Location
-      </a>
+    <a href="https://www.facebook.com/share/18z4UUHq3N/" class="glass-btn" target="_blank">
+      <div class="btn-icon" style="color: #1877f2;"><i class="fab fa-facebook-f"></i></div>
+      <div class="btn-info">
+        <span class="btn-title">فيسبوك</span>
+       
+      </div>
+      <i class="fas fa-external-link-alt" style="opacity: 0.5; font-size: 12px;"></i>
+    </a>
 
-      <a href="tel:+201062056425" class="link-box">
-        <i class="fas fa-phone" style="color:green;"></i> Phone
-      </a>
+    <a href="https://www.instagram.com/andriagold.s" class="glass-btn" target="_blank">
+      <div class="btn-icon" style="color: #e4405f;"><i class="fab fa-instagram"></i></div>
+      <div class="btn-info">
+        <span class="btn-title">انستجرام</span>
+        
+      </div>
+      <i class="fas fa-external-link-alt" style="opacity: 0.5; font-size: 12px;"></i>
+    </a>
 
-      <a href="https://wa.me/201062056425" class="link-box">
-        <i class="fab fa-whatsapp" style="color:#25D366;"></i> WhatsApp
-      </a>
-      
-      <a href="https://www.instagram.com/andriagold.s" class="link-box" target="_blank" rel="noopener">
-  <i class="fab fa-instagram" style="color:#e4405f;"></i> Instagram
-</a>
+    <a href="https://www.tiktok.com/@andriagold0" class="glass-btn" target="_blank">
+      <div class="btn-icon" style="color: #fff;"><i class="fab fa-tiktok"></i></div>
+      <div class="btn-info">
+        <span class="btn-title">تيك توك</span>
+   
+      </div>
+      <i class="fas fa-external-link-alt" style="opacity: 0.5; font-size: 12px;"></i>
+    </a>
 
-<a href="https://www.tiktok.com/@andriagold0" class="link-box" target="_blank" rel="noopener">
-  <i class="fab fa-tiktok" style="color:#000;"></i> TikTok
-</a>
-      
-<div class="footer-box">
-  <p>Designed & Developed by</p>
-  <span>Berbara Atef &amp; Tomas Atef</span>
-</div>
-    </div>
+    <a href="tel:+201062056425" class="glass-btn">
+      <div class="btn-icon" style="color: #d4af37;"><i class="fas fa-phone-alt"></i></div>
+      <div class="btn-info">        <span class="btn-title">رقم الهاتف</span>
+       
+      </div>
+      <i class="fas fa-external-link-alt" style="opacity: 0.5; font-size: 12px;"></i>
+    </a>
+
+    <a href="https://maps.app.goo.gl/MJZDQoPquqNBmW6F9" class="glass-btn" target="_blank">
+      <div class="btn-icon" style="color: #ff6b6b;"><i class="fas fa-map-marker-alt"></i></div>
+      <div class="btn-info">
+        <span class="btn-title">الموقع</span>
+       
+      </div>
+      <i class="fas fa-external-link-alt" style="opacity: 0.5; font-size: 12px;"></i>
+    </a>
   </div>
 
+  <div class="footer-box">
+    <p>Designed & Developed by</p>
+    <span>Berbara Atef & Tomas Atef</span>
+  </div>
 
 </body>
 </html>
